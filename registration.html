@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Campus Club</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Campus Club</h2>
+    <p>Meet new people, share ideas, and join student activities.</p>
+</header>
+    <nav class="navbar bg-light">
+        <div class="container d-flex flex-wrap gap-3">
+            <a class="nav-link" href="index.html">Basic Form</a>
+            <a class="nav-link" href="validation.html">HTML5 Validation</a>
+            <a class="nav-link" href="bootstrap.html">Bootstrap Form</a>
+            <a class="nav-link" href="feedback.html">Validation Feedback</a>
+            <a class="nav-link" href="registration.html">Registration</a>
+        </div>
+    </nav>
+
+   <main class="container py-5">
+    <h1 class="mb-3">Join Campus Club</h1>
+    <p class="mb-4">
+        Become part of our student community.
+        Join workshops, meet friends, and share your interests.
+    </p>
+
+    <form id="registration-form" class="row g-3">
+        <div class="col-md-6">
+            <label for="first-name" class="form-label">First Name</label>
+            <input type="text" class="form-control"
+                   id="first-name" name="first_name"
+                   autocomplete="given-name"
+                   required minlength="2" maxlength="50">
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+                Enter your first name, at least 2 characters.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="last-name" class="form-label">Last Name</label>
+            <input type="text" class="form-control"
+                   id="last-name" name="last_name"
+                   autocomplete="family-name"
+                   required minlength="2" maxlength="50">
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+                Enter your last name, at least 2 characters.
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control"
+                   id="email" name="email"
+                   autocomplete="email"
+                   placeholder="name@example.com" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+                Enter a valid email address.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control"
+                   id="password" name="password"
+                   autocomplete="new-password"
+                   aria-describedby="password-help"
+                   required minlength="8">
+            <div id="password-help" class="form-text">
+                Use at least 8 characters.
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+                Enter a password with at least 8 characters.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="confirm-password" class="form-label">
+                Confirm Password
+            </label>
+            <input type="password" class="form-control"
+                   id="confirm-password" name="confirm_password"
+                   autocomplete="new-password"
+                   required minlength="8">
+            <div class="valid-feedback">Passwords match!</div>
+            <div class="invalid-feedback">
+                Repeat your password. Both passwords must match.
+            </div>
+        </div>
+
+        <fieldset class="col-md-6">
+            <legend class="fs-6">Gender</legend>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input"
+                       id="female" name="gender" value="female" required>
+                <label for="female" class="form-check-label">Female</label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input"
+                       id="male" name="gender" value="male" required>
+                <label for="male" class="form-check-label">Male</label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input"
+                       id="private" name="gender" value="prefer_not_to_say"
+                       required>
+                <label for="private" class="form-check-label">
+                    Prefer not to say
+                </label>
+                <div class="valid-feedback">Selection complete.</div>
+                <div class="invalid-feedback">Choose one option.</div>
+            </div>
+        </fieldset>
+
+        <fieldset class="col-md-6">
+            <legend class="fs-6">Hobbies</legend>
+            <p class="form-text">Choose any interests. This is optional.</p>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input"
+                       id="coding" name="hobbies" value="coding">
+                <label for="coding" class="form-check-label">Coding</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input"
+                       id="drawing" name="hobbies" value="drawing">
+                <label for="drawing" class="form-check-label">Drawing</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input"
+                       id="sports" name="hobbies" value="sports">
+                <label for="sports" class="form-check-label">Sports</label>
+            </div>
+        </fieldset>
+
+        <div class="col-12">
+            <label for="country" class="form-label">Country</label>
+            <select id="country" name="country"
+                    class="form-select" required>
+                <option value="">Choose your country</option>
+                <option value="kazakhstan">Kazakhstan</option>
+                <option value="uzbekistan">Uzbekistan</option>
+                <option value="kyrgyzstan">Kyrgyzstan</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Choose your country.</div>
+        </div>
+
+        <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-primary">
+                Join the Club
+            </button>
+            <button type="reset" class="btn btn-outline-secondary">
+                Reset
+            </button>
+        </div>
+
+        <p id="result" class="col-12 text-success"
+           role="status" hidden>
+            Your form passed validation! This is a demo;
+            no account has been created.
+        </p>
+    </form>
+</main>
+
+<footer>
+    <p>© 2026 Campus Club. Created by Aruzhan.</p>
+</footer>
+
+<script>
+    const form = document.querySelector("#registration-form");
+    const password = document.querySelector("#password");
+    const confirmPassword = document.querySelector("#confirm-password");
+    const result = document.querySelector("#result");
+
+    function checkPasswords() {
+        const matches = password.value === confirmPassword.value;
+
+        confirmPassword.setCustomValidity(
+            matches ? "" : "Passwords do not match."
+        );
+    }
+
+    form.addEventListener("input", function () {
+        checkPasswords();
+        result.hidden = true;
+    });
+
+    form.addEventListener("change", function () {
+        result.hidden = true;
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        checkPasswords();
+        form.classList.add("was-validated");
+
+        result.hidden = !form.checkValidity();
+    });
+
+    form.addEventListener("invalid", function () {
+        form.classList.add("was-validated");
+    }, true);
+
+    form.addEventListener("reset", function () {
+        form.classList.remove("was-validated");
+        confirmPassword.setCustomValidity("");
+        result.hidden = true;
+    });
+</script>
+</body>
+</html>

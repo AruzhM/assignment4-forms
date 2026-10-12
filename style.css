@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f4ed;
+    color: #243d35;
+    line-height: 1.6;
+}
+
+header {
+    padding: 32px 24px;
+    background-color: #243d35;
+    color: white;
+    text-align: center;
+}
+
+header h2 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header p {
+    margin: 0;
+    color: #e0e9df;
+}
+
+nav {
+    padding: 16px !important;
+    background-color: white !important;
+    border-bottom: 1px solid #deded3;
+}
+
+nav,
+nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav a {
+    padding: 8px 12px;
+    color: #243d35 !important;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background-color: #e8eee5;
+}
+
+main,
+main.container {
+    width: calc(100% - 32px);
+    max-width: 900px;
+    margin: 36px auto;
+    padding: 32px !important;
+    background-color: white;
+    border: 1px solid #deded3;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(36, 61, 53, 0.06);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 22px;
+    border: 1px solid #315c47;
+    border-radius: 10px;
+    background-color: #315c47;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #243d35;
+}
+
+.btn-primary {
+    --bs-btn-bg: #315c47;
+    --bs-btn-border-color: #315c47;
+    --bs-btn-hover-bg: #243d35;
+    --bs-btn-hover-border-color: #243d35;
+    --bs-btn-active-bg: #243d35;
+    --bs-btn-active-border-color: #243d35;
+}
+
+button[type="reset"] {
+    background-color: white;
+    color: #315c47;
+}
+
+button[type="reset"]:hover {
+    background-color: #e8eee5;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #5e6e65;
+}
+
+.basic-form > div {
+    margin-bottom: 20px;
+}
+
+.basic-form label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.basic-form input,
+.basic-form textarea {
+    border: 1px solid #aab8ae;
+}
+
+a:focus-visible,
+button:focus-visible,
+.basic-form input:focus-visible,
+.basic-form textarea:focus-visible {
+    outline: 3px solid #b78836;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    main,
+    main.container {
+        padding: 20px !important;
+        margin: 20px auto;
+    }
+
+    header h2 {
+        font-size: 26px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
