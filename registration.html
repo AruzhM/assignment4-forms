@@ -192,13 +192,15 @@
     const confirmPassword = document.querySelector("#confirm-password");
     const result = document.querySelector("#result");
 
-    function checkPasswords() {
-        const matches = password.value === confirmPassword.value;
+   function checkPasswords() {
+    const matches = password.value === confirmPassword.value;
 
-        confirmPassword.setCustomValidity(
-            matches ? "" : "Passwords do not match."
-        );
+    if (matches) {
+        confirmPassword.setCustomValidity("");
+    } else {
+        confirmPassword.setCustomValidity("Passwords do not match.");
     }
+}
 
     form.addEventListener("input", function () {
         checkPasswords();
